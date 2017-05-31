@@ -7,6 +7,7 @@ require('babel-core/register');
 require('babel-polyfill');
 
 const App = require('./src/App').default;
+const version = require('./package').version;
 
 const port = process.env.PORT ? Number(process.env.PORT) : 8080;
 
@@ -16,7 +17,10 @@ app.listen(port);
 
 app.route('GET', '/', (req, res, ctx) => {
   const index = fs.readFileSync('./public/index.html');
-  ctx.send(200, index.toString().replace('{{app}}', renderToString(createElement(App, { from: 'Server' }))));
+  ctx.send(200,
+    index.toString()
+      .replace('{{app}}', renderToString(createElement(App, { from: 'Server' })))
+      .replace('{{version}}', version));
 });
 
 app.route('GET', '/javascripts/bundle.js', (req, res, ctx) => {
@@ -26,5 +30,7 @@ app.route('GET', '/javascripts/bundle.js', (req, res, ctx) => {
 
 app.route('default', (req, res, ctx) => {
   const error = fs.readFileSync('./public/error.html');
-  ctx.send(404, error.toString());
+  ctx.send(404,
+    error.toString()
+      .replace('{{version}}', version));
 });
