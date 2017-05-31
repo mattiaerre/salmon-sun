@@ -14,7 +14,12 @@
     "type": "git",
     "url": "git+https://github.com/mattiaerre/salmon-sun.git"
   },
-  "keywords": [],
+  "keywords": [
+    "client-side-rendering",
+    "merry",
+    "react",
+    "server-side-rendering"
+  ],
   "author": {
     "name": "Mattia Richetto",
     "email": "mattia.richetto"
@@ -37,14 +42,14 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "jest": "^20.0.4",
-    "nodemon": "^1.11.0",
-    "webpack": "^2.6.1"
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-polyfill": "^6.23.0",
     "merry": "^5.0.3",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "webpack": "^2.6.1"
   }
 }
