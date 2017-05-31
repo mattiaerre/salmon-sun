@@ -1,7 +1,7 @@
 {
   "name": "salmon-sun",
   "version": "1.0.4",
-  "description": "salmon-sun",
+  "description": "Playing w/ [Merry](https://github.com/shipharbor/merry).",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
